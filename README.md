@@ -41,7 +41,7 @@
 * newScheduledThreadPool 创建一个定长线程池，支持定时及周期性任务执行  
 * newSingleThreadExecutor 创建一个单线程化的线程池，它只会用唯一的工作线程来执行任务，保证所有任务按照指定顺序执行
 
-1. newCachedThreadPool
+1.newCachedThreadPool
 ```
 public static ExecutorService newCachedThreadPool() {  
         return new ThreadPoolExecutor(0, Integer.MAX_VALUE, 60L, TimeUnit.SECONDS, new SynchronousQueue<Runnable>());  
@@ -49,13 +49,13 @@ public static ExecutorService newCachedThreadPool() {
 参数说明:1.线程池维护线程的最小数量；2.能够创建线程的最大数量；3.线程无任务时的包活时间60s；4.包活时间单位；5.所用的阻塞队列(SynchronousQueue同步队列，来一个处理一个，容量为空；要移除必须要等待插入，一旦又插入马上进行处理，也就是移除)
 * 终止并从缓存中移除那些已有 60 秒钟未被使用的线程
 ```
-2. newFixedThreadPool
+2.newFixedThreadPool
 ```
 public static ExecutorService newFixedThreadPool(int nThreads) {
       return new ThreadPoolExecutor(nThreads, nThreads, 0L, TimeUnit.MILLISECONDS,new LinkedBlockingQueue<Runnable>());  
 } 
 ```
-3. newScheduledThreadPool
+3.newScheduledThreadPool
 ```
 ScheduledExecutorService  threadPools = Executors.newScheduledThreadPool(2);  
 for(int i = 0; i < 2;i++){  
@@ -70,7 +70,7 @@ for(int i = 0; i < 2;i++){
 //scheduleAtFixedRate 这个方法是不管你有没有执行完，反正我每隔4秒来执行一次，以相同的频率来执行
 //scheduleWithFixedDelay 这个是等你方法执行完后，我再隔4秒来执行，也就是相对延迟后，以固定的频率去执行
 ```
-4. newSingleThreadExecutor
+4.newSingleThreadExecutor
 ```
 public static ExecutorService newSingleThreadExecutor() {  
         return new FinalizableDelegatedExecutorService  
