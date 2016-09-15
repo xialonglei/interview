@@ -77,4 +77,9 @@ public static ExecutorService newSingleThreadExecutor() {
             (new ThreadPoolExecutor(1, 1, 0L, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<Runnable>()));  
 } 
 ```
+<h3 id='3'>数据库索引失效</h3>
+1. or语句
+2. like 语句
+3. 如果字段类型为字符串，但是查询是没有加''，索引也无效
+
 
