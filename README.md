@@ -88,7 +88,7 @@ public static ExecutorService newSingleThreadExecutor() {
 1. http发送的请求交给DispatcherServlet，然后通过HandlerMapping找到与之对应的Controller
 2. 之后通过Controller调用业务逻辑
 3. 之后Controller返回ModelAndView逻辑视图给DispatcherServlet
-4. 通过ViewResovler对ModelAndView进行解析
+4. 通过ViewResovler对ModelAndView进行解析,也就是找到视图真正的地址
 5. 之后视图负责将结果显示给客户端
 
 
