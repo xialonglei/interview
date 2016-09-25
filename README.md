@@ -96,7 +96,7 @@ public static ExecutorService newSingleThreadExecutor() {
 MyISAM:MyISAM引擎很容易获得总行数的统计,查询速度变得更快,因为myisam存储引擎已经存储了表的总行数。注意一点：MyISAM存储引擎的表，count(\*)速度快的也仅仅是不带where条件的count  
 
 InnoDB:针对InnoDB表,尽量不执行 SELECT COUNT(\*) 语句,因为Innodb表没有类似MyISAM那样的内部计数器来记录表记录总量,执行这个操作将会全表扫描,速度很慢。所以呢，表的行数越多，扫描的时间就越多。当你表行数还是小数量的时候体会不出速度差距。比如百万也感觉不出明显。上千万就会很明显速度差别了。  
-对策：对innob存储引擎的大表进行select count()统计总数操作,业界都会尽量避免。
+对策：对InnoDB存储引擎的大表进行select count(\*)统计总数操作,业界都会尽量避免。
 
 
 
