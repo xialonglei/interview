@@ -83,6 +83,14 @@ public static ExecutorService newSingleThreadExecutor() {
 3. 如果字段类型为字符串，但是查询是没有加''，索引也无效
 
 <h3 id='4'>springmvc工作原理</h3>
-![imag](https://github.com/xialonglei/interview/blob/master/springmvc%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86.jpg)
+![imag](https://github.com/xialonglei/interview/blob/master/springmvc%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86.jpg)  
+
+1. http发送的请求交给DispatcherServlet，然后通过HandlerMapping找到与之对应的Controller
+2. 之后通过Controller调用业务逻辑
+3. 之后Controller返回ModelAndView逻辑视图给DispatcherServlet
+4. 通过ViewResovler对ModelAndView进行解析
+5. 之后视图负责将结果显示给客户端
+
+
 
 
