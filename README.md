@@ -83,6 +83,6 @@ public static ExecutorService newSingleThreadExecutor() {
 3. 如果字段类型为字符串，但是查询是没有加''，索引也无效
 
 <h3 id='4'>springmvc工作原理</h3>
-![imag](interview/springmvc工作原理.jpg)
+![imag](https://github.com/xialonglei/interview/blob/master/springmvc%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86.jpg)
 
 
